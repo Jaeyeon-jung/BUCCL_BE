@@ -1,0 +1,226 @@
+[
+    {
+        "model": "buccl_main.location",
+        "pk": 1,
+        "fields": {
+            "name": "잠실 종합운동장",
+            "address": "서울 송파구 올림픽로 25 서울종합운동장",
+            "image": "locations/jamsil.jpeg",
+            "operating_hours": "평일: 10:00 - 22:00 / 주말: 10:00 - 18:00",
+            "category": "잠수풀",
+            "pool_depth": "최대 5m",
+            "pricing": "1일 입장권 20,000원",
+            "facilities": ["샤워실", "락커룸", "무료 주차"],
+            "latitude": 37.51101,
+            "longitude": 127.09450
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 2,
+        "fields": {
+            "name": "청주 학생수영장",
+            "address": "충청북도 청주시 청원구 공항로59번길 33",
+            "image": "locations/ju.jpeg",
+            "operating_hours": "평일, 토요일 6:00~18:00 / 일요일 휴무",
+            "category": "잠수풀",
+            "pool_depth": "최대 3m",
+            "pricing": "입장권 15,000원",
+            "facilities": ["장비대여", "샤워실"],
+            "latitude": 36.64226,
+            "longitude": 127.49969
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 3,
+        "fields": {
+            "name": "올림픽공원",
+            "address": "서울 송파구 올림픽로 424",
+            "image": "locations/allgong.jpeg",
+            "operating_hours": "평일: 14:00 - 21:00 / 토: 12:00 - 17:00 / 일: 10:00 - 14:00",
+            "category": "잠수풀",
+            "pool_depth": "최대 4m",
+            "pricing": "종일권 25,000원",
+            "facilities": ["휴게실", "장비세척장"],
+            "latitude": 37.51966,
+            "longitude": 127.11450
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 4,
+        "fields": {
+            "name": "가평 K26",
+            "address": "경기 가평군 청평면 고재길 262-57",
+            "image": "locations/k26.jpeg",
+            "operating_hours": "평일 09:00 - 22:00 / 토 07:00 - 21:00 / 일 휴무",
+            "category": "개방수역",
+            "pool_depth": "최대 26m",
+            "pricing": "평일 40,000원, 주말 50,000원",
+            "facilities": ["샤워실", "휴게실", "장비보관"],
+            "latitude": 37.74051,
+            "longitude": 127.42227
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 5,
+        "fields": {
+            "name": "용인 딥스테이션",
+            "address": "경기 용인시 처인구 포곡읍 성산로 523",
+            "image": "locations/deeps.jpg",
+            "operating_hours": "08:00 - 23:00",
+            "category": "개방수역",
+            "pool_depth": "최대 36m",
+            "pricing": "평일 48,000원, 주말 66,000원",
+            "facilities": ["샤워실", "휴게실", "장비보관", "슈트대여"],
+            "latitude": 37.28560,
+            "longitude": 127.22200
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 6,
+        "fields": {
+            "name": "성남 종합운동장",
+            "address": "경기 성남시 중원구 제일로 60",
+            "image": "locations/sungnam.jpeg",
+            "operating_hours": "평일 09:00 - 21:00 / 주말 09:00 - 18:00",
+            "category": "잠수풀",
+            "pool_depth": "최대 3m",
+            "pricing": "1회 입장 15,000원",
+            "facilities": ["장비보관", "주차장"],
+            "latitude": 37.44035,
+            "longitude": 127.15407
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 7,
+        "fields": {
+            "name": "수원 월드컵경기장",
+            "address": "경기 수원시 팔달구 월드컵로 310",
+            "image": "locations/suwon.jpeg",
+            "operating_hours": "평일 09:00 - 22:00 / 주말 09:00 - 22:00",
+            "category": "잠수풀",
+            "pool_depth": "최대 3m",
+            "pricing": "평일 18,000원 / 주말 22,000원",
+            "facilities": ["샤워실", "주차장"],
+            "latitude": 37.28665,
+            "longitude": 127.02009
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 8,
+        "fields": {
+            "name": "일산 수작코리아",
+            "address": "경기도 고양시 덕양구 동헌로235번길 120-57 (대자동)",
+            "image": "locations/ilsan.jpeg",
+            "operating_hours": "평일 10:00 - 17:00 / 화·수 18:30 - 22:00",
+            "category": "잠수풀",
+            "pool_depth": "최대 4m",
+            "pricing": "1일권 25,000원",
+            "facilities": ["샤워실", "장비세척장"],
+            "latitude": 37.70786,
+            "longitude": 126.82905
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 9,
+        "fields": {
+            "name": "대전 용운국제수영장",
+            "address": "대전 동구 동부로 138 용운국제수영장",
+            "image": "locations/alps.jpeg",
+            "operating_hours": "평일 10:00 - 21:00 / 주말 09:00 - 17:00",
+            "category": "잠수풀",
+            "pool_depth": "최대 3.5m",
+            "pricing": "종일권 20,000원",
+            "facilities": ["샤워실", "락커룸"],
+            "latitude": 36.32592,
+            "longitude": 127.45978
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 10,
+        "fields": {
+            "name": "송도 스포츠파크",
+            "address": "인천 연수구 인천신항대로892번길 40",
+            "image": "locations/songdo.jpeg",
+            "operating_hours": "평일 09:00 - 21:00 / 주말 09:00 - 16:00",
+            "category": "잠수풀",
+            "pool_depth": "최대 3m",
+            "pricing": "1회 15,000원",
+            "facilities": ["락커룸"],
+            "latitude": 37.39635,
+            "longitude": 126.62839
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 11,
+        "fields": {
+            "name": "용인 아르피아",
+            "address": "경기 용인시 수지구 포은대로 499",
+            "image": "locations/yong.jpeg",
+            "operating_hours": "평일 08:00 - 22:00, 토 08:00 - 18:00, 일 08:00 - 17:00",
+            "category": "잠수풀",
+            "pool_depth": "최대 3m",
+            "pricing": "입장권 18,000원",
+            "facilities": ["샤워실"],
+            "latitude": 37.32418,
+            "longitude": 127.09457
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 12,
+        "fields": {
+            "name": "광명 뉴서울 다이빙풀",
+            "address": "경기 광명시 하안로288번길 15",
+            "image": "locations/gwangmyeong.jpeg",
+            "operating_hours": "평일 08:00 - 18:00",
+            "category": "잠수풀",
+            "pool_depth": "최대 5m",
+            "pricing": "종일권 23,000원",
+            "facilities": ["샤워실", "주차장", "장비보관"],
+            "latitude": 37.45594,
+            "longitude": 126.85747
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 13,
+        "fields": {
+            "name": "시흥 파라다이브",
+            "address": "경기 시흥시 거북섬중앙로 1 1동3층 303호",
+            "image": "locations/para.jpeg",
+            "operating_hours": "주말/평일 08:00 - 23:00",
+            "category": "개방수역",
+            "pool_depth": "최대 10m",
+            "pricing": "1일권 30,000원",
+            "facilities": ["샤워실", "휴게실"],
+            "latitude": 37.35544,
+            "longitude": 126.73369
+        }
+    },
+    {
+        "model": "buccl_main.location",
+        "pk": 14,
+        "fields": {
+            "name": "오산 테마잠수풀",
+            "address": "경기 오산시 수청동 607-1",
+            "image": "locations/osan.jpeg",
+            "operating_hours": "주말/평일 09:00 - 23:00",
+            "category": "개방수역",
+            "pool_depth": "최대 8m",
+            "pricing": "입장권 28,000원",
+            "facilities": ["샤워실", "장비보관", "장비대여"],
+            "latitude": 37.14941,
+            "longitude": 127.07769
+        }
+    }
+] 

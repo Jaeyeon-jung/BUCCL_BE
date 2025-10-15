@@ -1,0 +1,43 @@
+FROM python:3.9
+
+WORKDIR /app
+
+# 시스템 패키지 업데이트 및 설치
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    default-libmysqlclient-dev \
+    libjpeg-dev \
+    libpng-dev \
+    zlib1g-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# 의존성 파일 복사
+COPY requirements.txt .
+
+# 패키지 설치
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Python 로그 버퍼링 비활성화
+ENV PYTHONUNBUFFERED=1
+
+# 환경 변수 파일을 먼저 복사 (.env.dev를 .env로 복사)
+COPY .env.dev .env
+
+# 소스 코드 복사
+COPY . .
+
+# entrypoint 스크립트 권한 설정
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# 정적 파일 디렉토리 생성
+RUN mkdir -p /app/static
+
+# 환경 변수 설정
+ENV DJANGO_ENV=development
+
+# Django 개발 서버 실행을 위한 포트 설정
+EXPOSE 8000
+
+# entrypoint 스크립트 실행
+CMD ["/entrypoint.sh"]

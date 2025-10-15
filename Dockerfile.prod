@@ -1,0 +1,61 @@
+FROM python:3.9-slim AS builder
+
+WORKDIR /app
+
+# 빌드에 필요한 시스템 패키지 설치
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    default-libmysqlclient-dev \
+    libjpeg-dev \
+    libpng-dev \
+    zlib1g-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# 의존성 파일 복사
+COPY requirements.txt .
+
+# 패키지 설치
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 다단계 빌드를 위한 최종 이미지
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# 실행에 필요한 최소한의 시스템 패키지만 설치
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    default-libmysqlclient-dev \
+    libjpeg-dev \
+    libpng-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV PYTHONUNBUFFERED=1
+
+# 빌더에서 설치된 패키지 복사
+COPY --from=builder /usr/local/lib/python3.9/site-packages/ /usr/local/lib/python3.9/site-packages/
+COPY --from=builder /usr/local/bin/ /usr/local/bin/
+
+# 환경변수 파일 복사 (프로덕션용)
+COPY .env.prod .env
+
+# 환경 변수 설정
+ENV DJANGO_ENV=production
+
+# 소스 코드 복사
+COPY . .
+
+# entrypoint 스크립트 권한 설정
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# 정적 파일 디렉토리 생성
+RUN mkdir -p /app/static
+
+# 정적 파일 수집
+RUN python manage.py collectstatic --noinput
+
+# 서비스 포트 설정
+EXPOSE 8000
+
+# entrypoint 스크립트 실행
+CMD ["/entrypoint.sh"]

@@ -1,0 +1,31 @@
+version: '3.2' # docker-compose version obsolete
+
+services:
+  # 개발 환경
+  backend_dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: backend_dev
+    ports:
+      - "8001:8000"
+    environment:
+      - LOAD_FIXTURES=false # fixtures 로드가 필요한 경우 true로 변경
+    restart: always
+    volumes:
+      - ./:/app
+
+
+  # 운영 환경 
+  backend_prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: backend_prod
+    ports:
+      - "8000:8000"
+    environment:
+      - LOAD_FIXTURES=false # 최초 배포 시에만 true로 변경
+    restart: always
+    volumes:
+      - /opt/Backend/media:/app/media # to_do: 추후 오브젝트 스토리지로 변경

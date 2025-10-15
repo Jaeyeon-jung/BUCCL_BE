@@ -1,0 +1,16 @@
+[
+    {
+        "model": "buccl_main.sport",
+        "pk": 1,
+        "fields": {
+            "name": "프리다이빙"
+        }
+    },
+    {
+        "model": "buccl_main.sport",
+        "pk": 2,
+        "fields": {
+            "name": "스쿠버다이빙"
+        }
+    }
+]
